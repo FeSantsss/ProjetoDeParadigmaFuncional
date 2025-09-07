@@ -42,7 +42,7 @@ public class Program {
 			System.out.println("Email of people whose salary is more than " + salaryRequered + ":");
 			list.stream()
 				.filter(e -> e.getSalary() >= salaryRequered)
-				.sorted(Comparator.comparing(Employee::getName))
+				.sorted(Comparator.comparing(Employee::getEmail))
 				.collect(Collectors.toList())
 				.forEach(System.out::println);
 			
